@@ -31,14 +31,14 @@ dart pub global activate mason_cli
 ```
 ### Install brick from https://brickhub.dev/
 ```sh
- mason add -g riverpod_simple_architectureitecture
+ mason add -g clean_architecture_ddd_riverpod
 
 ```
 ## OR
 
 ### Install brick from github
 ```sh
- mason add -g riverpod_simple_architectureitecture --git-url https://github.com/Shreemanarjun/river_bricks --git-path bricks/riverpod_simple_architectureitecture
+ mason add -g clean_architecture_ddd_riverpod --git-url https://github.com/Shreemanarjun/river_bricks --git-path bricks/clean_architecture_ddd_riverpod
 
 ```
 ### Upgrade to newer version
