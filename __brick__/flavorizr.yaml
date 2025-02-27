@@ -1,0 +1,61 @@
+flavorizr:
+ide: "vscode"
+app:
+  android:
+    flavorDimensions: "flavor-type"
+  ios:
+    flavorDimensions: "flavor-type"
+
+flavors:
+  dev:
+    app:
+      name: "{{project_name}} Dev"
+
+    android:
+      applicationId: "{{org_name.lowerCase()}}.dev"
+      icon: "assets/app/dev/app-icon.png"
+      adaptiveIcon:
+        foreground: "assets/app/dev/app-icon-foreground.png"
+        background: "assets/app/android/app-icon-background.png"
+    ios:
+      bundleId: "{{application_id.lowerCase()}}.dev"
+      icon: "assets/app/dev/app-icon.png"
+    macos:
+      bundleId: "{{application_id.lowerCase()}}.dev"
+      icon: "assets/app/dev/app-icon.png"
+
+  stg:
+    app:
+      name: "{{project_name}} Stg"
+
+    android:
+      applicationId: "{{org_name.lowerCase()}}.stg" 
+      icon: "assets/app/stg/app-icon.png"
+      adaptiveIcon:
+        foreground: "assets/app/stg/app-icon.png"
+        background: "assets/app/android/app-icon-background.png"
+      
+    ios:
+      bundleId: "{{application_id.lowerCase()}}.stg" 
+      icon: "assets/app/stg/app-icon.png"
+    macos:
+      bundleId: "{{application_id.lowerCase()}}.stg" 
+      icon: "assets/app/stg/app-icon.png"
+
+  prod:
+    app:
+      name: "{{project_name}}"
+
+    android:
+      applicationId: "{{org_name.lowerCase()}}" 
+      icon: "assets/app/prod/app-icon.png"
+      adaptiveIcon:
+        foreground: "assets/app/prod/app-icon-foreground.png"
+        background: "assets/app/android/app-icon-background.png"
+
+    ios:
+      bundleId: "{{application_id.lowerCase()}}" 
+      icon: "assets/app/prod/app-icon.png"
+    macos:
+      bundleId: "{{application_id.lowerCase()}}" 
+      icon: "assets/app/prod/app-icon.png"

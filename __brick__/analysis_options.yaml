@@ -1,0 +1,53 @@
+include: package:flutter_lints/flutter.yaml
+analyzer:
+  plugins:
+    - custom_lint
+  exclude:
+    - '**/*.freezed.dart'
+    - '**/*.g.dart'
+    - '**/*.gr.dart'
+    - '**/*.mocks.dart'
+
+  
+  # In addition to the default Flutter lints, the codebase follows the DCM rules below.
+  # If you don't have DCM installed, feel free to ignore them.
+  # More info: https://dcm.dev/docs/quick-start/
+dart_code_metrics:
+  extends:
+    - recommended
+  rules:
+    - avoid-redundant-else: false
+    - avoid-unused-parameters: false
+    - avoid-passing-async-when-sync-expected: false
+    - prefer-prefixed-global-constants: false
+    - prefer-match-file-name: false
+    - prefer-single-widget-per-file: false
+    - prefer-trailing-comma: false
+    - unnecessary-trailing-comma: false
+
+  errors:
+    missing_required_param: error
+    missing_return: error
+    todo: ignore
+    invalid_annotation_target: ignore
+  strong-mode:
+    implicit-casts: false
+    implicit-dynamic: false
+  
+
+linter:
+  rules:
+    prefer_single_quotes: true
+    directives_ordering: false
+    prefer_double_quotes: false
+    use_key_in_widget_constructors: false
+    prefer_const_constructors: true
+    prefer_const_constructors_in_immutables: true
+    always_specify_types: false
+    unnecessary_final: false
+    public_member_api_docs: false
+    prefer_expression_function_bodies: false
+    avoid_classes_with_only_static_members: false
+    prefer_const_literals_to_create_immutables: true
+    lines_longer_than_80_chars: false
+    prefer_relative_imports: true
